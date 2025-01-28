@@ -44,6 +44,18 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+### Uso de la API
+
+```bash
+$ curl -X POST http://localhost:3000/agent/get-response -H "Content-Type: application/json" -d '{"content": "Hola, quisiera saber el estado de mi pedido", "role": "user"}'
+```
+
+Luego del primer mensaje el agente devolverá la sessionId para continuar la conversación.
+
+```bash
+$ curl -X POST http://localhost:3000/agent/get-response -H "Content-Type: application/json" -d '{"content": "El id de mi pedido es XIMSNLEDWX0L", "role": "user", "sessionId": "81d3ad0d-299d-46ee-af8a-14961c6f256b"}'
+```
+
 ## Edge Cases y Futuras Tareas
 
 ### 1. Manejo de saludos, agradecimientos, descontentos, despedidas
