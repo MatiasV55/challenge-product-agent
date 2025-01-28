@@ -49,6 +49,12 @@ Luego del primer mensaje el agente devolverá la sessionId para continuar la con
 curl -X POST http://localhost:3000/agent/get-response -H "Content-Type: application/json" -d '{"content": "El id de mi pedido es XIMSNLEDWX0L", "role": "user", "sessionId": "81d3ad0d-299d-46ee-af8a-14961c6f256b"}'
 ```
 
+Nota: Para obtener los ids de los pedidos existentes se puede hacer una llamada a la siguiente ruta:
+
+```bash
+curl http://localhost:3000/order/tracking-ids
+```
+
 ## Edge Cases y Futuras Tareas
 
 ### 1. Manejo de saludos, agradecimientos, descontentos, despedidas

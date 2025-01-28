@@ -17,4 +17,9 @@ export class OrderService {
       relations: ['productOrders', 'productOrders.product'],
     });
   }
+
+  async getExistingOrdersTrackingIds(): Promise<string[]> {
+    const orders = await this.orderRepository.find();
+    return orders.map((order) => order.trackingId);
+  }
 }
