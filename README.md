@@ -34,14 +34,7 @@ $ npm run seed:run
 ### Levantar API
 
 ```bash
-# desarrollo
 $ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# producción
-$ npm run start:prod
 ```
 
 ### Uso de la API
