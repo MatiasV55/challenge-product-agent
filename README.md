@@ -8,7 +8,7 @@ Solo debe ser capaz de responder informando sobre productos y pedidos existentes
 ## Instalación
 
 ```bash
-$ npm install
+npm install
 ```
 
 ## Ejecución
@@ -16,37 +16,37 @@ $ npm install
 ### Levantar base de datos
 
 ```bash
-$ docker compose up -d
+docker compose up -d
 ```
 
 ### Correr migraciones
 
 ```bash
-$ npm run migration:run
+npm run migration:run
 ```
 
 ### Ejecutar seeders
 
 ```bash
-$ npm run seed:run
+npm run seed:run
 ```
 
 ### Levantar API
 
 ```bash
-$ npm run start
+npm run start
 ```
 
 ### Uso de la API
 
 ```bash
-$ curl -X POST http://localhost:3000/agent/get-response -H "Content-Type: application/json" -d '{"content": "Hola, quisiera saber el estado de mi pedido", "role": "user"}'
+curl -X POST http://localhost:3000/agent/get-response -H "Content-Type: application/json" -d '{"content": "Hola, quisiera saber el estado de mi pedido", "role": "user"}'
 ```
 
 Luego del primer mensaje el agente devolverá la sessionId para continuar la conversación.
 
 ```bash
-$ curl -X POST http://localhost:3000/agent/get-response -H "Content-Type: application/json" -d '{"content": "El id de mi pedido es XIMSNLEDWX0L", "role": "user", "sessionId": "81d3ad0d-299d-46ee-af8a-14961c6f256b"}'
+curl -X POST http://localhost:3000/agent/get-response -H "Content-Type: application/json" -d '{"content": "El id de mi pedido es XIMSNLEDWX0L", "role": "user", "sessionId": "81d3ad0d-299d-46ee-af8a-14961c6f256b"}'
 ```
 
 ## Edge Cases y Futuras Tareas
